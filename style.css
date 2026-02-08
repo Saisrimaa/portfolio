@@ -1,0 +1,76 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.project {
+    background: #f4f4f4;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    background: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Dark Mode */
+.dark {
+    background-color: #121212;
+    color: white;
+}
+
+.dark .project {
+    background: #1e1e1e;
+}
