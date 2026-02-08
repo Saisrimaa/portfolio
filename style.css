@@ -1,10 +1,11 @@
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     transition: 0.3s;
 }
 
+/* Header */
 header {
     background: #333;
     color: white;
@@ -18,37 +19,40 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-size: 16px;
 }
 
+/* Sections */
 section {
     padding: 40px;
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: translateY(0);
     transition: 0.6s;
 }
 
-section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+/* Profile image */
 .profile {
     width: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
+/* Project cards */
 .project {
     background: #f4f4f4;
     padding: 15px;
     margin-top: 10px;
+    border-radius: 6px;
 }
 
+/* Buttons */
 button {
     background: #333;
     color: white;
@@ -73,4 +77,40 @@ button {
 
 .dark .project {
     background: #1e1e1e;
+}
+
+/* 🔥 Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .profile {
+        width: 120px;
+    }
+
+    .project {
+        padding: 12px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
 }

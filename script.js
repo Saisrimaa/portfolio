@@ -1,27 +1,12 @@
-function validateForm() {
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-
-    if (name === "" || email === "") {
-        alert("Please fill all fields");
-        return false;
-    }
-
-    alert("Message sent successfully!");
-    return true;
-}
-
-/* Dark Mode */
-function toggleDarkMode() {
-    document.body.classList.toggle("dark");
-}
-
-/* Scroll Animation */
-window.addEventListener("scroll", () => {
+/* Scroll Animation Fix for Mobile */
+function revealSections() {
     document.querySelectorAll("section").forEach(sec => {
-        const top = window.scrollY;
-        if (top > sec.offsetTop - 400) {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
             sec.classList.add("show");
         }
     });
-});
+}
+
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
